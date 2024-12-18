@@ -1,0 +1,17 @@
+CREATE DATABASE weather_app;
+
+USE weather_app;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE searches (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  city VARCHAR(255) NOT NULL,
+  weather JSON NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
