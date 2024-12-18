@@ -1,0 +1,6 @@
+/* frontend/src/App.css */
+body {
+  background: linear-gradient(to right, cyan, blue);
+  margin: 0; 
+  height: 100vh;  
+}
